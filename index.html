@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Meassage sharing site</title>
+		<link  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<meta charset="utf-8">
+		<style>
+			.row{
+				margin-top: 20vh;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<div class="card-panel hide" id="display">
+				<h1 id="display-msg"></h1>
+				<a href="\index.html">Create Your message</a>
+			</div>
+			<div class="col s8 offset-s2" id="input-form">
+				<div class="card-panel">
+					<form>
+						<lable>Enter a Secreat Message</lable>
+						<input id="input" />
+						<button class="btn">Creat</button>
+					</form>
+				</div>
+			</div>
+			<div class="col s8 offset-s2 hide" id="link-form">
+			<div class="card-panel">	
+				<label>get link</label>
+				<input id="link-input"/>
+				</div>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
