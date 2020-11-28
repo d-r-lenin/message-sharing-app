@@ -8,11 +8,11 @@ const {hash}=window.location;
 if(hash){
 	inputPanel.classList.add('hide');
 	display.classList.remove('hide');
-	msgDisplay.innerText=atob(hash.replace(/#/,""));
+	msgDisplay.innerText=decodeURIComponent(escape(window.atob(hash.replace(/#/,""))));;
 }
 document.querySelector('form').addEventListener("submit",event=>{
 	event.preventDefault();
-	const encoded=btoa(input.value);
+	const encoded=btoa(unescape(encodeURIComponent(input.value)));;
 	inputPanel.classList.add('hide');
 	linkPanel.classList.remove('hide');
 	linkInput.value=window.location+'#'+encoded;
